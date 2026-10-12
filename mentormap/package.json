@@ -1,0 +1,13 @@
+{
+  "name": "mentormap",
+  "version": "2.0.0",
+  "private": true,
+  "description": "MentorMap - structured mentorship platform (MERN)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server"
+  },
+  "devDependencies": { "concurrently": "^9.0.1" }
+}
